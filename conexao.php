@@ -1,8 +1,15 @@
 <?php
-	$servidor = "localhost";
-	$usuario = "root";
-	$senha = "";
-	$dbname = "celke";
-	
-	//Criar a conexao
-	$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+$servername = "localhost";
+$username = "root";
+$database = "db_enquete";
+$password = "";
+
+//  Create a new connection to the MySQL database using PDO
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+?>

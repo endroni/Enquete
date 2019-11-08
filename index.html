@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title>Votação</title>
+  <title>Acesso</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
@@ -12,68 +12,27 @@
 
 <div class="container-fluid">
 <img src="img/logo.png" alt="SENAI FIEMG" class="img-responsive">
- <div class="page-header">
-  <h1>Mundo SENAI</h1>
- </div>
- <h2>Sistema de votação</h2>
-  <p>Selecione o grupo desejado:</p>            
-  <table class="table table-responsive table-hover">
-    <thead>
-      <tr>	  	
-        <th>Tema</th>
-        <th>Lider</th>
-        <th>Email</th>
-		<th>Votar</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>		
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-		<td>
-			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Votar</button>						
-		</td>
-      </tr>
-      <tr>		
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-		<td>
-			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Votar</button>						
-		</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-		<td>
-			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Votar</button>						
-		</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Obrigado!</h4>
-        </div>
-        <div class="modal-body">
-          <p>Seu voto é muito importante.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-      
-    </div>
+<div class="page-header">
+ <h1 style="text-align:center">Mundo SENAI 2019</h1>
+</div>
+
+<form id="formExemplo" data-toggle="validator" role="form" action="votar.php" method="get">
+  <div class="form-group">
+    <label for="textNome" class="control-label">Nome</label>
+    <input id="textNome" class="form-control" placeholder="Digite seu Nome..." type="text" required>
   </div>
+    
+  <div class="form-group">
+    <label for="inputEmail" class="control-label">Email</label>
+    <input id="inputEmail" class="form-control" placeholder="Digite seu E-mail" type="email" 
+      data-error="Por favor, informe um e-mail correto." required>
+    <div class="help-block with-errors"></div>
+  </div>  
+  
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+  </div>
+</form>
 </div>
 
 </body>
